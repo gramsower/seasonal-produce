@@ -1,7 +1,7 @@
 # Seasonal Produce
 
 #### (Brief Description of Application)
-This application will automatically load using the users api address to give them produce that are currently in season in their area. They user from there can select a specific region if they would like to look else where. They are also select the time of year that they want to know when produce are in season.
+This application will automatically load using the users ip address to give them produce that are currently in season in their area. They user from there can select a specific region if they would like to look else where. They are also select the time of year that they want to know when produce are in season.
 #### Contributors
   * Greg Ramsower
   * Peter Philavanh
