@@ -1,8 +1,13 @@
-# (Application Name)
+# Seasonal Produce
 
 #### (Brief Description of Application)
 
-#### By (Your Name Here)
+#### Contributors
+  * Greg Ramsower
+  * Peter Philavanh
+  * Grace Lee
+  * Athea DeLing
+  * Jonathan Liera
 
 ## Technologies Used
 
@@ -27,3 +32,4 @@
 * _should go here_
 
 ## License
+copyright (c) 10/23/2022
