@@ -14,6 +14,8 @@ let cabbage = new VegetablesAM('cabbage', '', 'Red and green cabbage should have
 let kale = new VegetablesAM('kale', '', 'When shopping for kale, stay clear of wilted or browning leaves. Leaves and stalks should be firm and dry instead of wilted and mushy.');
 let lettuce = new VegetablesAM('lettuce', '', 'There are many varieties of lettuce, from loose-leaf to those bought as a head. For all varieties, look for leaves that are intact and not wilting.');
 
+//const vegArr = [asparagus, broccoli, cabbage, kale, lettuce];
+
 export class FruitsAM {
   constructor (fruitName, fruitSeason =[], fruitInfo) {
     this.fruitName = fruitName;
@@ -41,4 +43,4 @@ let blackEyedPeas = new LegumesAM('black-eyed peas', '', 'When it comes to fresh
 let chickpeas = new LegumesAM('cheakpeas', '', 'Also known as garbanzo beans, the fresh green pods (and seeds inside) are edible, but most are harvested dried. Chickpea leaves are also edible.');
 let greenBeans = new LegumesAM('green beans', '', 'Fresh green beans should have a snappy crispness when bent in half. They should be free of blemishes and mold and the pod should not be hard or dried out.');
 let limaBeans = new LegumesAM('lima beans', '', 'Lima beans are a type of shell bean and can be purchased either fresh in the pod or dried. If buying fresh, look for plump and bumpy pods.');
-let adzuki = new LegumesAM('adzuki', '', '');
+let adzuki = new LegumesAM('adzuki', '', 'The bean is usually found dried. In East Asain cuisine, it is commonly sweetened by boiling with sugar and made into a past before eating.');
