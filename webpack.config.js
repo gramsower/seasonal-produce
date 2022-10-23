@@ -18,7 +18,7 @@ module.exports = {
     new ESLintPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'template',
+      title: 'Seasonal Produce',
       template: './src/index.html',
       inject: 'body'
     }),
