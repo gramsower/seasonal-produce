@@ -13,6 +13,8 @@ export default class IPLocate {
       return error;
     }
   }
+
+  
   /*
   async function userRegion(location[I am not sure we need to pass an argument here]) {
       let userState = await IPLocateresponse.state_prov;
@@ -47,4 +49,5 @@ export default class IPLocate {
   }
   */
 }
+
 
