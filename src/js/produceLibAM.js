@@ -42,20 +42,3 @@ let chickpeas = new LegumesAM('cheakpeas', '', 'Also known as garbanzo beans, th
 let greenBeans = new LegumesAM('green beans', '', 'Fresh green beans should have a snappy crispness when bent in half. They should be free of blemishes and mold and the pod should not be hard or dried out.');
 let limaBeans = new LegumesAM('lima beans', '', 'Lima beans are a type of shell bean and can be purchased either fresh in the pod or dried. If buying fresh, look for plump and bumpy pods.');
 let adzuki = new LegumesAM('adzuki', '', '');
-
-// region dertermines season of veg/fruit --> will need branching function to determine season
-// let veggArr = [
-//   asparagus = ['asparagus', ['season'], 'Asparagus comes in green, white, purple and wild varities. Look for the thinnest stalks possible; these are the most tender. Steer clear of limp and wilted asparagus.'],
-//   broccoli = ['broccoli', ['seasons'], 'Broccoli florets should be tightly closed and deep green, with a purplish tinge; avoid limp or yellowing broccoli. Stems should be free of mold or signs of bruising.'],
-//   cabbage = ['cabbage', ['seasons'], 'Red and green cabbage should have a firm, tight head and feel heavy for their size, with no black or soft spots. Savoy and Napa cabbage are generally a bit looser'],
-//   kale = ['kale', ['seasons'], 'When shopping for kale, stay clear of wilted or browning leaves. Leaves and stalks should be firm and dry instead of wilted and mushy.'],
-//   lettuce = ['lettuce', ['seasons'], 'There are many varieties of lettuce, from loose-leaf to those bought as a head. For all varieties, look for leaves that are intact and not wilting.'],
-// ]
-
-
-// let fruitArr = [
-//   apple = ['apple',['seasons'],'Worldwide, there are more than 7,500 known varieties, 100 of which are grown commercially in the US. They all differ in shape, size, color, texture, aroma and flavor.'],
-//   blueberry = ['blueberry',['seasons'],'Look for firm, dry, plump blueberries with smooth skin and no shriveled or moldy bits. Pass on greenish or red ones they are underripe.'],
-//   cantaloupe = ['cantaloupe',['seasons'],]
-//   cherry = []
-//   grape = []
