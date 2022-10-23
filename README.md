@@ -1,15 +1,19 @@
-# (Application Name)
+# Seasonal Produce
 
 #### (Brief Description of Application)
-
-#### By (Your Name Here)
+This application will automatically load using the users ip address to give them produce that are currently in season in their area. They user from there can select a specific region if they would like to look else where. They are also select the time of year that they want to know when produce are in season.
+#### Contributors
+  * Greg Ramsower
+  * Peter Philavanh
+  * Grace Lee
+  * Athea DeLing
+  * Jonathan Liera
 
 ## Technologies Used
-
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+  * HTML
+  * CSS
+  * Bootstrap
+  * Javascript
 
 ## Description
 
@@ -22,8 +26,7 @@
 * _format_
 
 ## Known Bugs
-
-* _Any known issues_
-* _should go here_
+  * Currently there are no known bugs
 
 ## License
+copyright (c) 10/23/2022
