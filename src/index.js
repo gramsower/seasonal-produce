@@ -5,19 +5,11 @@ import IPLocate from './ipAPI';
 
 async function getLocation() {
   const response = await IPLocate.getLocation();
-  if (response.main) {
-    printElements(response);
-  } else {
-    printError(response);
-  }
+  printElements(response);
 }
 
 function printElements(response) {
-  //`${reponse}`;
-}
-
-function printError(error) {
-  //`${error}`;
+  console.log(response.state_prov);
 }
 
 function handle() {
@@ -26,4 +18,4 @@ function handle() {
 
 window.addEventListener('load', function() {
   handle();
-})
+});
