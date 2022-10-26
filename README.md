@@ -19,7 +19,7 @@ This application will automatically load using the users ip address to give them
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
+* [IPAPI](https://ipgeolocation.io/) [RecipeAPI](https://spoonacular.com/food-api/docs)
 * _to list setup instructions_
 * _in a simple_
 * _easy-to-understand_
