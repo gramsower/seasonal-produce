@@ -12,6 +12,7 @@ async function getLocation(response) {
 function determineUserRegion(userState) {
   // let userState = response.state_prov;
   if (userState === ('washington' || 'oregon' || 'idaho' || 'wyoming' || 'montana')) {
+    printElements(userState);
     // return produce <-- based on northwest region
   } else if (userState === ('texas' || 'nevada' || 'arizona' || 'colorado' || 'california' || 'utah' || 'new mexico' || 'oklahoma')) {
    // return produce <-- based on southwest region
@@ -19,12 +20,14 @@ function determineUserRegion(userState) {
     //return produce <-- based on midwest region
   } else if (userState === ('west virginia' || 'virginia' || 'north carolina' || 'south carolina' || 'tennessee' || 'mississippi' || 'alabama' || 'georgia' || 'florida' || 'arkansas')) {
     // return produce <--based on south region
-  } else (userState === ('maine' || 'new hampshire' || 'vermont' || 'new york' || 'massachussetts' || 'connecticut' || 'rhode island' || 'new jersey' || 'pennsylvania' || 'maryland' || 'delaware')) {
+  } else if (userState === ('maine' || 'new hampshire' || 'vermont' || 'new york' || 'massachussetts' || 'connecticut' || 'rhode island' || 'new jersey' || 'pennsylvania' || 'maryland' || 'delaware')) {
     // return produce <-- based on northeast region
+  } else {
+    return error;
   }
 }
 
-function printElements(location) {
+function printElements() {
   console.log(response.state_prov);
 }
 
@@ -34,4 +37,4 @@ function handle() {
 
 window.addEventListener('load', function() {
   document.querySelector('form').addEventListener('submit', handle());
-});
+})
