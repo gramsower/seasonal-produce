@@ -21,41 +21,20 @@ async function getRecipe(searchInput) {
 
 function determineUserRegion(userState) {
   if (userState.toLowerCase() === ('washington' || 'oregon' || 'idaho' || 'wyoming' || 'montana')) {
-    region = 'northwest';
+    // add code to alert user to their region
     // return produce <-- based on northwest region
   } else if (userState.toLowerCase() === ('texas' || 'nevada' || 'arizona' || 'colorado' || 'california' || 'utah' || 'new mexico' || 'oklahoma')) {
-    region = 'southwest';
-    // return produce <-- based on southwest region
+   // return produce <-- based on southwest region
   } else if (userState.toLowerCase() === ('north dakota' || 'south dakota' || 'nebraska' || 'kansas' || 'minnesota' || 'iowa' || 'indiana' || 'michigan' || 'wisconsin' || 'illinois' || 'ohio' || 'kentucky' || 'missouri' )) {
-    region = 'midwest';
     //return produce <-- based on midwest region
   } else if (userState.toLowerCase() === ('west virginia' || 'virginia' || 'north carolina' || 'south carolina' || 'tennessee' || 'mississippi' || 'alabama' || 'georgia' || 'florida' || 'arkansas')) {
-    region = 'south';
     // return produce <--based on south region
   } else if (userState.toLowerCase() === ('maine' || 'new hampshire' || 'vermont' || 'new york' || 'massachussetts' || 'connecticut' || 'rhode island' || 'new jersey' || 'pennsylvania' || 'maryland' || 'delaware')) {
-    region = 'northeast';
     // return produce <-- based on northeast region
   } else {
     return error;
   }
-  regionBasedProduce(region)
 }
-
-// function regionBasedProduce(regionResult) {
-//   let regionResult = determineUserRegion();
-//   if (regionResult == 'northwest') {
-
-//   } else if (regionResult == 'southwest') {
-
-//   } else if (regionResult == 'midwest') {
-
-//   } else if (regionResult == 'south') {
-
-//   } else if (regionResult == 'northeast') {
-
-//   }
-//   return produce;
-// }
 
 function printElements() {
   console.log(response.state_prov);
