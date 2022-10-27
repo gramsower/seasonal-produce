@@ -5,29 +5,57 @@ import { vegArrObjectAM } from './js/produceLibAM';
 //import { getVegetables } from './js/produceLibAM';
 //import { VegetablesNZ, FruitsNZ, LegumesNZ } from './js/produceLIBNZ';
 import IPLocate from './ipAPI';
+import Recipe from './recipeAPI';
 
 async function getLocation(response) {
   const response = await IPLocate.getLocation();
   let userState = response.state_prov;
   determineUserRegion(userState);
 }
+async function getRecipe(searchInput) {
+  const response = await Recipe.getRecipe(searchInput);
+  return response;
+  //need event listener that display recipes for a specific produce which would be what the searchInput parameter becomes
+  //need function to display recipe options
+}
 
 function determineUserRegion(userState) {
-  if (userState === ('washington' || 'oregon' || 'idaho' || 'wyoming' || 'montana')) {
-    // add code to alert user to their region
+  if (userState.toLowerCase() === ('washington' || 'oregon' || 'idaho' || 'wyoming' || 'montana')) {
+    region = 'northwest';
     // return produce <-- based on northwest region
-  } else if (userState === ('texas' || 'nevada' || 'arizona' || 'colorado' || 'california' || 'utah' || 'new mexico' || 'oklahoma')) {
-   // return produce <-- based on southwest region
-  } else if (userState === ('north dakota' || 'south dakota' || 'nebraska' || 'kansas' || 'minnesota' || 'iowa' || 'indiana' || 'michigan' || 'wisconsin' || 'illinois' || 'ohio' || 'kentucky' || 'missouri' )) {
+  } else if (userState.toLowerCase() === ('texas' || 'nevada' || 'arizona' || 'colorado' || 'california' || 'utah' || 'new mexico' || 'oklahoma')) {
+    region = 'southwest';
+    // return produce <-- based on southwest region
+  } else if (userState.toLowerCase() === ('north dakota' || 'south dakota' || 'nebraska' || 'kansas' || 'minnesota' || 'iowa' || 'indiana' || 'michigan' || 'wisconsin' || 'illinois' || 'ohio' || 'kentucky' || 'missouri' )) {
+    region = 'midwest';
     //return produce <-- based on midwest region
-  } else if (userState === ('west virginia' || 'virginia' || 'north carolina' || 'south carolina' || 'tennessee' || 'mississippi' || 'alabama' || 'georgia' || 'florida' || 'arkansas')) {
+  } else if (userState.toLowerCase() === ('west virginia' || 'virginia' || 'north carolina' || 'south carolina' || 'tennessee' || 'mississippi' || 'alabama' || 'georgia' || 'florida' || 'arkansas')) {
+    region = 'south';
     // return produce <--based on south region
-  } else if (userState === ('maine' || 'new hampshire' || 'vermont' || 'new york' || 'massachussetts' || 'connecticut' || 'rhode island' || 'new jersey' || 'pennsylvania' || 'maryland' || 'delaware')) {
+  } else if (userState.toLowerCase() === ('maine' || 'new hampshire' || 'vermont' || 'new york' || 'massachussetts' || 'connecticut' || 'rhode island' || 'new jersey' || 'pennsylvania' || 'maryland' || 'delaware')) {
+    region = 'northeast';
     // return produce <-- based on northeast region
   } else {
     return error;
   }
+  regionBasedProduce(region)
 }
+
+// function regionBasedProduce(regionResult) {
+//   let regionResult = determineUserRegion();
+//   if (regionResult == 'northwest') {
+
+//   } else if (regionResult == 'southwest') {
+
+//   } else if (regionResult == 'midwest') {
+
+//   } else if (regionResult == 'south') {
+
+//   } else if (regionResult == 'northeast') {
+
+//   }
+//   return produce;
+// }
 
 function printElements() {
   console.log(response.state_prov);
