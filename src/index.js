@@ -1,11 +1,9 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import { vegArrObjectAM } from './js/produceLibAM';
-//import { getVegetables } from './js/produceLibAM';
-//import { VegetablesNZ, FruitsNZ, LegumesNZ } from './js/produceLIBNZ';
-import IPLocate from './js/ipAPI';
-
+import { produceArrObject } from './js/produceLib';
+import IPLocate from './ipAPI';
+import Recipe from './recipeAPI';
 
 async function getLocation() {
   const response = await IPLocate.getLocation();
@@ -13,7 +11,12 @@ async function getLocation() {
   let dateReturned = response.time_zone.current_time;
   let date = dateReturned.slice(5, 10);
   determineUserRegion(userState);
-  determineUserSeason(date);
+}
+async function getRecipe(searchInput) {
+  const response = await Recipe.getRecipe(searchInput);
+  return response;
+  //need event listener that display recipes for a specific produce which would be what the searchInput parameter becomes
+  //need function to display recipe options
 }
 
 function determineUserRegion(userState) {
@@ -28,7 +31,7 @@ function determineUserRegion(userState) {
   } else if (userState === ('maine' || 'new hampshire' || 'vermont' || 'new york' || 'massachussetts' || 'connecticut' || 'rhode island' || 'new jersey' || 'pennsylvania' || 'maryland' || 'delaware')) {
     return 'northeast';
   } else {
-    return 'error, no region available';
+    return ''Your location could not be determined', no region available';
   }
 }
 
@@ -61,29 +64,19 @@ window.addEventListener('load', function() {
   document.querySelector('form').addEventListener('submit', handle());
 });
 
+const prodArrToDisp = produceArrObject;
+console.log(prodArrToDisp);
 
-
-// function getProduce() {
-//   for (let i=0; i < vegArrAM.length; i++) {
-//     const vegetable = new VegetablesAM.vegArrAM[i];
-//     console.log(vegetable.vegArrAM)
-//     produceArray.push(vegetable);
-//     console.log(vegetable);
-//   }
-// }
-// getProduce();
-const vegArrayInner = vegArrObjectAM;
-
-const displayProduce = (vegArrayInner) => {
+const displayProduce = (prodArrToDisp) => {
   const displayDiv = document.querySelector('#card-content');
-  const cardHTMLString = vegArrayInner.map ( vegArrayInner => `
-  <li class="card">
-    <h3 class="name">${vegArrayInner.vegName}</h3>
-    <p> Seasons Available: ${vegArrayInner.vegSeason} <br>
-    ${vegArrayInner.vegInfo}</p>
-  </li>
+  const cardHTMLString = prodArrToDisp.map (prodArrToDisp  => `
+  <div class="card">
+    <h3 class="name">${prodArrToDisp.name}</h3>
+    <p class="info-p"> Seasons Available: ${prodArrToDisp.season} <br>
+    Info: ${prodArrToDisp.info}</p>
+  </div>
   `).join('');
   displayDiv.innerHTML = cardHTMLString;
 };
 
-displayProduce(vegArrayInner);
+displayProduce(prodArrToDisp);
