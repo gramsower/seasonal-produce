@@ -30,12 +30,16 @@ return produce;
 // Cantaloupe
 // Radish
 // Tomatoes
+// Chickpeas
+// Orca Beans
+// 
+// 
 // 
 //NorthWest Winter Season
 // Cabbage
 // Kale
 // Lettuce
-// 
+// Chickpeas
 //NorthWest Spring Season
 // Asparagus
 // Cabbage
@@ -60,7 +64,8 @@ return produce;
 // Tomatoes
 // Strawberries
 // Watermelons
-// 
+// Adzuki Beans
+// Orca Beans
 
 //SouthWest Fall Season
 // Broccoli
@@ -70,7 +75,10 @@ return produce;
 // Green beans
 // Radish
 // Tomatoes
-// 
+// Nopal
+// Chickpeas
+// Peanuts
+// Lima Beans
 //SouthWest Winter Season
 // Broccoli
 // Cabbage
@@ -79,7 +87,7 @@ return produce;
 // Radish
 // Strawberries
 // Oranges
-// 
+// Chickpeas
 //SouthWest Spring Season
 // Asparagus
 // Broccoli
@@ -93,7 +101,7 @@ return produce;
 // Strawberries
 // Oranges
 // Peas 
-// 
+// Black-eyed Peas
 //SouthWest Summer Season
 // Apples
 // Blueberry
@@ -104,7 +112,9 @@ return produce;
 // Tomatoes
 // Nectarines
 // Watermelons
-// 
+// Nopal
+// Black-eyed Peas
+// Lima Beans
 
 
 //MidWest Fall Season
@@ -116,9 +126,11 @@ return produce;
 // Onion
 // Radish
 // Tomato
-//  
+// Chickpeas
+// Soybeans
+// Navy Beans
 //MidWest Winter Season
-// 
+// Chickpeas
 // 
 // 
 // 
@@ -126,7 +138,7 @@ return produce;
 // Asparagus
 // Lettuce
 // Radish
-// 
+// Black-eyed Peas
 // 
 // 
 // 
@@ -146,7 +158,9 @@ return produce;
 // Tomatoes
 // Strawberries
 // Watermelons
-// 
+// Black-eyed Peas
+// Adzuki Beans
+// Navy Beans
 
 //South Fall Season
 // Cabbage
@@ -155,7 +169,7 @@ return produce;
 // Apple
 // Grape
 // Tomato
-// 
+// Peanuts
 //South Winter Season
 // Apple
 // Kale
@@ -172,7 +186,7 @@ return produce;
 // Tomato
 // Strawberries
 // Oranges
-// 
+// Black-Eyed Peas
 //South Summer Season
 // Asparagus
 // Apple
@@ -211,7 +225,7 @@ return produce;
 // Radish
 // Strawberry
 // Peas
-// 
+// Black-eyed Peas
 //Northeast Summer Season
 // Asparagus
 // Broccoli
@@ -232,4 +246,4 @@ return produce;
 // Strawberry
 // Watermelon
 // Peas
-// 
+// Black-eyed Peas
