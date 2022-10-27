@@ -1,12 +1,10 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import { vegArrObjectAM } from './js/produceLibAM';
-//import { getVegetables } from './js/produceLibAM';
-//import { VegetablesNZ, FruitsNZ, LegumesNZ } from './js/produceLIBNZ';
+import { produceArrObject } from './js/produceLib';
 import IPLocate from './ipAPI';
 
-async function getLocation(response) {
+async function getLocation() {
   const response = await IPLocate.getLocation();
   let userState = response.state_prov;
   determineUserRegion(userState);
@@ -25,13 +23,13 @@ function determineUserRegion(userState) {
   } else if (userState === ('maine' || 'new hampshire' || 'vermont' || 'new york' || 'massachussetts' || 'connecticut' || 'rhode island' || 'new jersey' || 'pennsylvania' || 'maryland' || 'delaware')) {
     // return produce <-- based on northeast region
   } else {
-    return error;
+    return 'Your location could not be determined';
   }
 }
 
-function printElements() {
-  console.log(response.state_prov);
-}
+// function printElements() {
+//   console.log(response.state_prov);
+// }
 
 function handle() {
   getLocation();
@@ -39,32 +37,21 @@ function handle() {
 
 window.addEventListener('load', function() {
   document.querySelector('form').addEventListener('submit', handle());
-})
+});
 
+const prodArrToDisp = produceArrObject;
+console.log(prodArrToDisp);
 
-
-// function getProduce() {
-//   for (let i=0; i < vegArrAM.length; i++) {
-//     const vegetable = new VegetablesAM.vegArrAM[i];
-//     console.log(vegetable.vegArrAM)
-//     produceArray.push(vegetable);
-//     console.log(vegetable);
-//   }
-// }
-// getProduce();
-const vegArrayInner = vegArrObjectAM;
-console.log(vegArrayInner)
-
-const displayProduce = (vegArrayInner) => {
+const displayProduce = (prodArrToDisp) => {
   const displayDiv = document.querySelector('#card-content');
-  const cardHTMLString = vegArrayInner.map ( vegArrayInner => `
-  <li class="card">
-    <h3 class="name">${vegArrayInner.vegName}</h3>
-    <p> Seasons Available: ${vegArrayInner.vegSeason} <br>
-    ${vegArrayInner.vegInfo}</p>
-  </li>
+  const cardHTMLString = prodArrToDisp.map (prodArrToDisp  => `
+  <div class="card">
+    <h3 class="name">${prodArrToDisp.name}</h3>
+    <p class="info-p"> Seasons Available: ${prodArrToDisp.season} <br>
+    Info: ${prodArrToDisp.info}</p>
+  </div>
   `).join('');
   displayDiv.innerHTML = cardHTMLString;
-}
+};
 
-displayProduce(vegArrayInner);
+displayProduce(prodArrToDisp);
