@@ -37,7 +37,7 @@ function handle() {
 
 window.addEventListener('load', function() {
   document.querySelector('form').addEventListener('submit', handle());
-})
+});
 
 const prodArrToDisp = produceArrObject;
 console.log(prodArrToDisp);
@@ -45,13 +45,13 @@ console.log(prodArrToDisp);
 const displayProduce = (prodArrToDisp) => {
   const displayDiv = document.querySelector('#card-content');
   const cardHTMLString = prodArrToDisp.map (prodArrToDisp  => `
-  <li class="card">
+  <div class="card">
     <h3 class="name">${prodArrToDisp.name}</h3>
-    <p> Seasons Available: ${prodArrToDisp.seasons} <br>
+    <p class="info-p"> Seasons Available: ${prodArrToDisp.season} <br>
     Info: ${prodArrToDisp.info}</p>
-  </li>
+  </div>
   `).join('');
   displayDiv.innerHTML = cardHTMLString;
-}
+};
 
 displayProduce(prodArrToDisp);
