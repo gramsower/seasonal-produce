@@ -1,4 +1,26 @@
-//NorthWest Fall Season
+function determineProduce(season){
+  let produce;
+  switch (season){
+    case 'northwest fall':
+    produce = ['apple' ,'grapes','onions','cabbage','kale', 'lettuce','cantaloupe','radish','tomatoes'];
+      break;
+    case 'northwest winter':
+    produce = ['cabbage','kale','lettuce'];
+      break;
+    case  'northwest spring':
+    produce = ['asparagus','cabbage','kale','letuce','raddish','strawberries'];
+      break;
+    case 'northwest summer':
+    produce = ['asparagus','brocoli','cabbage','kale','lettuce','apple','blueberry','cantaloupe','cherry','grapes','onions','raddish','tomatoes','strawberries','watermelons'];
+      break;
+    case 'southwest fall':
+      produce = ['brocoli','kale','lettuce','apple','green beans','raddish','tomatoes'];
+      break;
+    case 'SouthWest Winter Season':
+      produce = ['brocoli','cabbage','kale','lettuce','raddish','strawberries','oranges'];
+}
+return produce;
+}//NorthWest Fall Season
 // Apple
 // Grapes
 // Onions
