@@ -228,9 +228,7 @@ function determineseason(produce){
     case 'black-eyed peas':
       season = 'Northeast Summer';
       break;
- 
   }
-   
 return season;
 }
 
