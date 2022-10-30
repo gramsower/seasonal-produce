@@ -17,59 +17,66 @@ async function getLocation() {
 }
 
 function determineUserRegion(userState) {
-  if (userState === ('washington' || 'oregon' || 'idaho' || 'wyoming' || 'montana')) {
-    return 'northwest';
-  } else if (userState === ('texas' || 'nevada' || 'arizona' || 'colorado' || 'california' || 'utah' || 'new mexico' || 'oklahoma')) {
-    return 'southwest';
-  } else if (userState === ('north dakota' || 'south dakota' || 'nebraska' || 'kansas' || 'minnesota' || 'iowa' || 'indiana' || 'michigan' || 'wisconsin' || 'illinois' || 'ohio' || 'kentucky' || 'missouri')) {
-    return 'midwest';
-  } else if (userState === ('west virginia' || 'virginia' || 'north carolina' || 'south carolina' || 'tennessee' || 'mississippi' || 'alabama' || 'georgia' || 'florida' || 'arkansas')) {
-    return 'south';
-  } else if (userState === ('maine' || 'new hampshire' || 'vermont' || 'new york' || 'massachusetts' || 'connecticut' || 'rhode island' || 'new jersey' || 'pennsylvania' || 'maryland' || 'delaware')) {
-    return 'northeast';
+  let region;
+  if (userState.toLowerCase() === ('washington' || 'oregon' || 'idaho' || 'wyoming' || 'montana')) {
+    region = 'northwest';
+  } else if (userState.toLowerCase() === ('texas' || 'nevada' || 'arizona' || 'colorado' || 'california' || 'utah' || 'new mexico' || 'oklahoma')) {
+    region = 'southwest';
+  } else if (userState.toLowerCase() === ('north dakota' || 'south dakota' || 'nebraska' || 'kansas' || 'minnesota' || 'iowa' || 'indiana' || 'michigan' || 'wisconsin' || 'illinois' || 'ohio' || 'kentucky' || 'missouri')) {
+    region = 'midwest';
+  } else if (userState.toLowerCase() === ('west virginia' || 'virginia' || 'north carolina' || 'south carolina' || 'tennessee' || 'mississippi' || 'alabama' || 'georgia' || 'florida' || 'arkansas')) {
+    region = 'south';
+  } else if (userState.toLowerCase() === ('maine' || 'new hampshire' || 'vermont' || 'new york' || 'massachusetts' || 'connecticut' || 'rhode island' || 'new jersey' || 'pennsylvania' || 'maryland' || 'delaware')) {
+    region = 'northeast';
   } else {
-    return 'Your location could not be determined, no region available';
-  }
+    region = 'Your location could not be determined, no region available';
+  } console.log(region);
+  return region;
+  
 }
 
 function determineUserSeason(date) {
   let month = date.slice(0, 2);
   let day = date.slice(3, 5);
-  console.log(month);
-  console.log(day);
+  let season;
+  // console.log(month);
+  // console.log(day);
   if (month === ('01' || '02')) {
-    return 'winter';
+    season =  'winter';
   } else if (month === '03' && day <= '20') {
-    return 'winter';
+    season = 'winter';
   } else if (month === '03') {
-    return 'spring';
+    season = 'spring';
   } else if (month === ('04' || '05')) {
-    return 'spring';
+    season = 'spring';
   } else if (month === '06' && day <= '20') {
-    return 'spring';
+    season = 'spring';
   } else if (month === '06') {
-    return 'summer';
+    season = 'summer';
   } else if (month === ('07' || '08')) {
-    return 'summer';
+    season = 'summer';
   } else if (month === '09' && day <= '20') {
-    return 'summer';
+    season = 'summer';
   } else if (month === '09') {
-    return 'fall';
+    season = 'fall';
   } else if (month === ('10' || '11')) {
-    return 'fall';
+    season = 'fall';
   } else if (month === '12' && day <= '20') {
-    return 'fall';
+    season = 'fall';
   } else if (month === '12') {
-    return 'winter';
+    season = 'winter';
   } else {
-    return 'error getting the current season in your location';
+    season = 'error getting the current season in your location';
   }
+  console.log(season);
+  return season;
 }
 
-function determineProduce(determineUserRegion, determineUserSeason) {
+
+function determineProduce(userRegion, userSeason) {
   // let produceArray = [];
-  let userRegion = determineUserRegion;
-  let userSeason = determineUserSeason;
+  // let userRegion = determineUserRegion;
+  // let userSeason = determineUserSeason;
   if (userRegion === 'northwest' && userSeason === 'fall') {
     return northWestFall;
   } else if (userRegion === 'northwest' && userSeason === 'winter') {
