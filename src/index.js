@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import { produceArrObject } from './js/produceLib';
 import IPLocate from './js/ipAPI';
-import Recipe from './js/recipeAPI';
+//import Recipe from './js/recipeAPI';
 
 
 async function getLocation() {
@@ -37,9 +37,9 @@ function determineUserSeason(date) {
   if (month === ('01' || '02')) {
     return 'winter';
   } else if (month === '03' && day <= '20') {
-      return 'winter';
+    return 'winter';
   } else if (month === '03') {
-      return 'spring';
+    return 'spring';
   } else if (month === ('04' || '05')) {
     return 'spring';
   } else if (month === '06' && day <= '20') {
@@ -60,8 +60,8 @@ function determineUserSeason(date) {
     return 'winter';
   } else {
     return 'error getting the current season in your location';
-  };
-};
+  }
+}
 
 //function determineProduce(determineUserRegion, determineUserSeason) {
 // let produceArray = [];
@@ -90,10 +90,9 @@ const displayProduce = (prodArrToDisp) => {
   const displayDiv = document.querySelector('#card-content');
   const cardHTMLString = prodArrToDisp.map (prodArrToDisp  => `
   <div class="card">
-    <img class="card-img" src="src/img/${prodArrToDisp.img}" alt="produce image">
+    <img class="card-img" src="${prodArrToDisp.img}" alt="produce image">
     <h3 class="name">${prodArrToDisp.name}</h3>
-    <p class="info-p"> Seasons Available: ${prodArrToDisp.season} <br>
-    Info: ${prodArrToDisp.info}</p>
+    <strong>Info:</strong> ${prodArrToDisp.info}</p>
   </div>
   `).join('');
   displayDiv.innerHTML = cardHTMLString;
