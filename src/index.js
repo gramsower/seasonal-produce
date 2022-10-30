@@ -31,7 +31,7 @@ function determineUserRegion(userState) {
   } else if (userState === ('maine' || 'new hampshire' || 'vermont' || 'new york' || 'massachussetts' || 'connecticut' || 'rhode island' || 'new jersey' || 'pennsylvania' || 'maryland' || 'delaware')) {
     return 'northeast';
   } else {
-    return ''Your location could not be determined', no region available';
+    return 'Your location could not be determined, no region available';
   }
 }
 
