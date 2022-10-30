@@ -8,8 +8,8 @@
     case 'kale':
     case 'lettuce':
     case 'cantaloupe':
-    case 'raddish':
-    case 'tomatoe':
+    case 'radish':
+    case 'tomato':
     case 'chick peas':
     // case 'orca beans':
       season = 'NorthWest Fall';
@@ -24,7 +24,7 @@
     case  'cabbage':
     case  'kale':
     case  'lettuce':
-    case  'raddish':
+    case  'radish':
     case  'strawberry':
       season = 'NorthWest Spring';
       break;
@@ -39,7 +39,7 @@
     case  'cherry':
     case  'grape':
     case  'onion':
-    case  'raddish':
+    case  'radish':
     case  'tomato':
     case  'strawberry':
     case  'watermelon':
@@ -52,7 +52,7 @@
     case 'lettuce':
     case 'apple':
     case 'green beans':
-    case 'raddish':
+    case 'radish':
     case 'tomato':
     case 'nopal':
     case 'chickpeas':
@@ -64,7 +64,7 @@
     case 'cabbage':
     case 'kale':
     case 'lettuce':
-    case 'raddish':
+    case 'radish':
     case 'strawberry':
     case 'oranges':
     case 'chickpeas':
@@ -76,7 +76,7 @@
     case 'kale':
     case 'lettuce':
     case 'onions':
-    case 'raddish':
+    case 'radish':
     case 'tomato':
     case 'nectarine':
     case 'strawberry':
@@ -105,7 +105,7 @@
     case 'lettuce':
     case 'apple':
     case 'onion':
-    case 'raddish':
+    case 'radish':
     case 'tomato':
     case 'chickpeas':
     case 'soy beans':
@@ -117,7 +117,7 @@
       break;
     case 'asparagus':
     case 'lettuce':
-    case 'raddish':
+    case 'radish':
     case 'black-eyed peas':   
       season = 'MidWest Spring'
       break;
@@ -132,7 +132,7 @@
     case 'cherry':
     case 'grape':
     case 'onion':
-    case 'raddish':
+    case 'radish':
     case 'tomato':
     case 'strawberry':
     case 'watermelon':
@@ -165,7 +165,7 @@
     case  'blueberry':
     case  'green beans':
     case  'tomato':
-    case  'strawbery':
+    case  'strawberry':
     case  'orange':
     case  'black-eyed peas':
       season = 'South Spring';
@@ -189,7 +189,7 @@
     case 'apple':
     case 'grape':
     case 'onion':
-    case 'raddish':
+    case 'radish':
       season = 'Northeast Fall';
       break;
     case 'Ooops, too cold!! brrrr ':

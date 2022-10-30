@@ -1,13 +1,19 @@
 body {
-  background-color: bisque;
+  background-color: #d6b69e;
 }
 
 h1 {
   color: #344b3c;
+  text-align: center;
 }
 
 p {
   color: #626542;
+  text-align: center;
+}
+
+.produce {
+ text-align: center; 
 }
 
 .card-container {
