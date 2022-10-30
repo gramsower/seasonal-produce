@@ -101,14 +101,13 @@ const displayProduce = (prodArrToDisp) => {
 
 displayProduce(prodArrToDisp);
 
-function handle(event) {
+function loadProduce(event) {
   event.preventDefault();
   getLocation();
 }
 
 window.addEventListener('load', function() {
-  this.addEventListener("click");
-  handle();
+  document.querySelector("#produce").addEventListener("click", loadProduce);
 });
 
 // when browser loads it gets user's location and date (based on IP address) 
