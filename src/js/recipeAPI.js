@@ -15,3 +15,27 @@ export default class Recipe {
   }
  }
  
+
+
+// async function getRecipe(data) { 
+//   const response = await Recipe.getRecipe(data);
+//   return response;
+// need function to determine which recipes we need to call for the respective produce
+// Promise.all needs to be used? (loop through array, from function that determines which produce need to be displayed, and make an API call for each produce in the array)
+//}
+// ex.
+//let promiseArray = [];
+// for(let i = 0; i < data.length; i++){
+//   var apiRequest = http.request({
+//       ....
+//     }
+//    });
+//   promiseArray.push(apiRequest)
+// }
+
+// Promise.all(promiseArray)
+// .then(fn)
+// .catch(fn)
+//then we need a function to display the recipes 
+//
+

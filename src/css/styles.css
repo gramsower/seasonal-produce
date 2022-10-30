@@ -1,4 +1,16 @@
-.card-container{
+body {
+  background-color: bisque;
+}
+
+h1 {
+  color: #344b3c;
+}
+
+p {
+  color: #626542;
+}
+
+.card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   width: 1000px;
