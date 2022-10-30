@@ -26,4 +26,4 @@ For the user to setup this seasonal produce application the user will first need
   * Currently there are no known bugs
 
 ## License
-copyright (c) 10/23/2022
+[GNU GPL3.0](https://choosealicense.com/licenses/gpl-3.0/#) copyright (c) 10/23/2022
