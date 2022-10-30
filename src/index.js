@@ -65,13 +65,8 @@ function determineUserSeason(date) {
   } else {
     return 'error getting the current season in your location';
   };
-}
+};
     
-
-
-
-
-
 
 //function printElements() {
 //   console.log(response.state_prov);
