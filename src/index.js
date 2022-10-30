@@ -2,8 +2,8 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import { produceArrObject } from './js/produceLib';
-import IPLocate from './ipAPI';
-import Recipe from './recipeAPI';
+import IPLocate from './js/ipAPI';
+import Recipe from './js/recipeAPI';
 
 async function getLocation() {
   const response = await IPLocate.getLocation();
