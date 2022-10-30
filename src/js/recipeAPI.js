@@ -13,5 +13,5 @@ export default class Recipe {
       return error;
     }
   }
- }
+}
  

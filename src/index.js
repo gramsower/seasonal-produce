@@ -2,8 +2,8 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import { produceArrObject } from './js/produceLib';
-import IPLocate from './ipAPI';
-import Recipe from './recipeAPI';
+import IPLocate from './js/ipAPI';
+import Recipe from './js/recipeAPI';
 
 async function getLocation() {
   const response = await IPLocate.getLocation();
@@ -28,7 +28,7 @@ function determineUserRegion(userState) {
     return 'midwest';
   } else if (userState === ('west virginia' || 'virginia' || 'north carolina' || 'south carolina' || 'tennessee' || 'mississippi' || 'alabama' || 'georgia' || 'florida' || 'arkansas')) {
     return 'south';
-  } else if (userState === ('maine' || 'new hampshire' || 'vermont' || 'new york' || 'massachussetts' || 'connecticut' || 'rhode island' || 'new jersey' || 'pennsylvania' || 'maryland' || 'delaware')) {
+  } else if (userState === ('maine' || 'new hampshire' || 'vermont' || 'new york' || 'massachusetts' || 'connecticut' || 'rhode island' || 'new jersey' || 'pennsylvania' || 'maryland' || 'delaware')) {
     return 'northeast';
   } else {
     return 'Your location could not be determined, no region available';
@@ -48,7 +48,7 @@ function determineUserSeason(date) {
   } else if (month == ('7' || '8')) {
     return 'summer';
   } else {
-    return 'error retreiving season';
+    return 'error retrieving season';
   }
 }
 
