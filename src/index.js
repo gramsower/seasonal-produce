@@ -4,6 +4,7 @@ import './css/styles.css';
 import { produceArrObject } from './js/produceLib';
 import IPLocate from './js/ipAPI';
 import Recipe from './js/recipeAPI';
+import determineSeason from './js/seasonality';
 
 
 async function getLocation() {
@@ -65,6 +66,7 @@ function determineUserSeason(date) {
 
 //function determineProduce(determineUserRegion, determineUserSeason) {
 // let produceArray = [];
+
 // produceArray.push(produce);
 // }
 // ??? think Jonathan was working on using switch cases that determines only the seasonal availability of produces and not region based availability
