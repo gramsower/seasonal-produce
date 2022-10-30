@@ -1,26 +1,240 @@
-function determineProduce(season){
-  let produce;
-  switch (season){
-    case 'northwest fall':
-    produce = ['apple' ,'grapes','onions','cabbage','kale', 'lettuce','cantaloupe','radish','tomatoes'];
+function determineseason(produce){
+  let season;
+  switch (produce){
+    case 'apple':
+    case 'grape':
+    case 'onions':
+    case 'cabbage':
+    case 'kale':
+    case 'lettuce':
+    case 'cantaloupe':
+    case 'raddish':
+    case 'tomatoe':
+    case 'chick peas':
+    case 'orca beans':
+      season = 'NorthWest Fall';
       break;
-    case 'northwest winter':
-    produce = ['cabbage','kale','lettuce'];
+    case 'cabbage':
+    case 'kale':
+    case 'lettuce':
+    case 'chickpeas':
+      season = 'NorthWest Winter';
       break;
-    case  'northwest spring':
-    produce = ['asparagus','cabbage','kale','letuce','raddish','strawberries'];
+    case  'asparagus':
+    case  'cabbage':
+    case  'kale':
+    case  'lettuce':
+    case  'raddish':
+    case  'strawberry':
+      season = 'NorthWest Spring';
       break;
-    case 'northwest summer':
-    produce = ['asparagus','brocoli','cabbage','kale','lettuce','apple','blueberry','cantaloupe','cherry','grapes','onions','raddish','tomatoes','strawberries','watermelons'];
+    case  'asparagus':
+    case  'brocoli':
+    case  'cabbage':
+    case  'kale':
+    case  'lettuce':
+    case  'apple':
+    case  'blueberry':
+    case  'cantaloupe':
+    case  'cherry':
+    case  'grape':
+    case  'onion':
+    case  'raddish':
+    case  'tomato':
+    case  'strawberry':
+    case  'watermelon':
+    case  'adzuki beans':
+    case  'Orca beans':
+      season = 'NorthWest Summer';
       break;
-    case 'southwest fall':
-      produce = ['brocoli','kale','lettuce','apple','green beans','raddish','tomatoes'];
+    case 'brocoli':
+    case 'kale':
+    case 'lettuce':
+    case 'apple':
+    case 'green beans':
+    case 'raddish':
+    case 'tomato':
+    case 'nopal':
+    case 'chickpeas':
+    case 'peanuts':
+    case 'lima beans':
+      season = 'SouthWest Fall';
       break;
-    case 'SouthWest Winter Season':
-      produce = ['brocoli','cabbage','kale','lettuce','raddish','strawberries','oranges'];
+    case 'brocoli':
+    case 'cabbage':
+    case 'kale':
+    case 'lettuce':
+    case 'raddish':
+    case 'strawberry':
+    case 'oranges':
+    case 'chickpeas':
+      season = 'SouthWest Winter';
+      break;
+    case 'asparagus':
+    case 'brocoli':
+    case 'cabbage':
+    case 'kale':
+    case 'lettuce':
+    case 'onions':
+    case 'raddish':
+    case 'tomato':
+    case 'nectarine':
+    case 'strawberry':
+    case 'orange':
+    case 'peas':
+    case 'black-eyed peas':
+      season = 'SouthWest Spring';
+      break;
+    case 'apple':
+    case 'blueberry':
+    case 'cantaloupe':
+    case 'grape':
+    case 'green beans':
+    case 'onion':
+    case 'tomato':
+    case 'nectarine':
+    case 'watermelon':
+    case 'nopal':
+    case 'black-eyed peas':
+    case 'lima beans':
+      season = 'SouthWest Summer';
+      break;
+    case 'brocoli':
+    case 'cabbage':
+    case 'kale':
+    case 'lettuce':
+    case 'apple':
+    case 'onion':
+    case 'raddish':
+    case 'tomato':
+    case 'chickpeas':
+    case 'soy beans':
+    case 'navy beans':
+      season = 'MidWest Fall';
+      break;
+    case 'chickpeas':
+      season = 'MidWest Winter';
+      break;
+    case 'asparagus':
+    case 'lettuce':
+    case 'raddish':
+    case 'black-eyed peas':   
+      season = 'MidWest Spring'
+      break;
+    case 'asparagus':
+    case 'brocoli':
+    case 'cabbage':
+    case 'kale':
+    case 'lettuce':
+    case 'apple':
+    case 'blueberry':
+    case 'cantaloupe':
+    case 'cherry':
+    case 'grape':
+    case 'onion':
+    case 'raddish':
+    case 'tomato':
+    case 'strawberry':
+    case 'watermelon':
+    case 'black-eyed peas':
+    case 'adzuki beans':
+    case 'navy beans':
+      season = 'Midwest Summer';
+      break;
+    case 'cabbage':
+    case 'kale':
+    case 'lettuce':
+    case 'apple':
+    case 'grape':
+    case 'tomato':
+    case 'peanuts':
+    case 'Chickpeas':
+    case 'Chickpeas':
+      season = 'South Fall';
+      break;
+    case 'apple':
+    case 'kale':
+    case 'lettuce':
+    case 'orange':
+      season = 'South Winter';
+      break;
+    case  'asparagus':
+    case  'brocoli':
+    case  'cabbage':
+    case  'lettuce':
+    case  'blueberry':
+    case  'green beans':
+    case  'tomato':
+    case  'strawbery':
+    case  'orange':
+    case  'black-eyed peas':
+      season = 'South Spring';
+      break;
+    case 'asparagus':
+    case 'apple':
+    case 'blueberry':
+    case 'cantaloupe':
+    case 'grape':
+    case 'green beans':
+    case 'tomato':
+    case 'watermelon':
+    case 'orange':
+    case 'peas':
+      season = 'South Summer'
+      break;
+    case 'brocoli':
+    case 'cabbage':
+    case 'kale':
+    case 'lettuce':
+    case 'apple':
+    case 'grape':
+    case 'onion':
+    case 'raddish':
+      season = 'Northeast Fall';
+      break;
+    case 'Ooops, too cold!! brrrr ':
+      season = 'Northeast Winter';
+      break;
+    case 'asparagus':
+    case 'brocoli':
+    case 'cabbage':
+    case 'kale':
+    case 'lettuce':
+    case 'cherry':
+    case 'radish':
+    case 'strawberry':
+    case 'peas':
+    case 'black-eyed peas':
+      season = 'Northeast Spring';
+      break;
+    case 'asparagus':
+    case 'cabbage':
+    case 'kale':
+    case 'lettuce':
+    case 'apple':
+    case 'blueberry':
+    case 'cantaloupe':
+    case 'cherry':
+    case 'grape':
+    case 'green beans':
+    case 'beans':
+    case 'onion':
+    case 'radish':
+    case 'tomato':
+    case 'nectarine':
+    case 'strawberry':
+    case 'watermelon':
+    case 'peas':
+    case 'black-eyed peas':
+      season = 'Northeast Summer';
+      break;
+ 
+  }
+   
+return season;
 }
-return produce;
-}//NorthWest Fall Season
+
+//NorthWest Fall Season
 // Apple
 // Grapes
 // Onions
