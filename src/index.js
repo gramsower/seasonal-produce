@@ -3,9 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import { produceArrObject, northEastFall, northEastSpring, northEastSummer, northEastWinter, northWestSpring, northWestSummer, northWestFall, northWestWinter, southWestFall, southWestSpring, southWestSummer, southWestWinter, midWestFall, midWestSpring, midWestSummer, midWestWinter, southFall, southSpring, southSummer, southWinter} from './js/produceLib';
 import IPLocate from './js/ipAPI';
-// import Recipe from './js/recipeAPI';
-// import determineSeason from './js/seasonality';
-
+//import Recipe from './js/recipeAPI';
 
 async function getLocation() {
   const response = await IPLocate.getLocation();
@@ -129,10 +127,9 @@ const displayProduce = (prodArrToDisp) => {
   const displayDiv = document.querySelector('#card-content');
   const cardHTMLString = prodArrToDisp.map (prodArrToDisp  => `
   <div class="card">
-    <img class="card-img" src="src/img/${prodArrToDisp.img}" alt="produce image">
+    <img class="card-img" src="${prodArrToDisp.img}" alt="produce image">
     <h3 class="name">${prodArrToDisp.name}</h3>
-    <p class="info-p"> Seasons Available: ${prodArrToDisp.season} <br>
-    Info: ${prodArrToDisp.info}</p>
+    <strong>Info:</strong> ${prodArrToDisp.info}</p>
   </div>
   `).join('');
   displayDiv.innerHTML = cardHTMLString;
