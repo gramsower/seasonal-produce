@@ -4,8 +4,8 @@
 export class Produce {
   constructor (name, season, img, info) {
     this.name = name;
-    this.season = season;
-    this.img = img
+    this.season = season.map((season) => season).join(', ');
+    this.img = img;
     this.info = info;
   }
 }
