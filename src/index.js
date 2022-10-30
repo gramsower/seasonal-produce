@@ -34,19 +34,34 @@ function determineUserRegion(userState) {
 function determineUserSeason(date) {
   let month = date.slice(0, 2);
   let day = date.slice(3, 5);
- // console.log(day);
-  if (month == ('10' || '11')) {
-    return 'fall'; 
-  } else if (month == ('1' || '2')) {
-    return 'winter'; 
-  } else if (month == ('4' || '5')) {
-    return 'spring'; 
-  } else if (month == ('7' || '8')) {
-    return 'summer'; 
+  if (month === ('01' || '02')) {
+    return 'winter';
+  } else if (month === '03' && day <= '20') {
+      return 'winter';
+  } else if (month === '03') {
+      return 'spring';
+  } else if (month === ('04' || '05')) {
+    return 'spring';
+  } else if (month === '06' && day <= '20') {
+    return 'spring';
+  } else if (month === '06') {
+    return 'summer';
+  } else if (month === ('07' || '08')) {
+    return 'summer';
+  } else if (month === '09' && day <= '20') {
+    return 'summer';
+  } else if (month === '09') {
+    return 'fall';
+  } else if (month === ('10' || '11')) {
+    return 'fall';
+  } else if (month === '12' && day <= '20') {
+    return 'fall';
+  } else if (month === '12') {
+    return 'winter';
   } else {
-    return 'error retrieving season';
-  }
-}
+    return 'error getting the current season in your location';
+  };
+};
 
 //function determineProduce(determineUserRegion, determineUserSeason) {
 // let produceArray = [];
