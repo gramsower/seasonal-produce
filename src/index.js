@@ -71,6 +71,7 @@ const displayProduce = (prodArrToDisp) => {
   const displayDiv = document.querySelector('#card-content');
   const cardHTMLString = prodArrToDisp.map (prodArrToDisp  => `
   <div class="card">
+    <img class="card-img" src="src/img/${prodArrToDisp.img}" alt="produce image">
     <h3 class="name">${prodArrToDisp.name}</h3>
     <p class="info-p"> Seasons Available: ${prodArrToDisp.season} <br>
     Info: ${prodArrToDisp.info}</p>
