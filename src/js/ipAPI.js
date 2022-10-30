@@ -15,11 +15,11 @@ export default class IPLocate {
 }
 
 /*
-  let northwest = ['washingtion', 'oregon', 'idaho', 'wyoming', 'montana'];
+  let northwest = ['washington', 'oregon', 'idaho', 'wyoming', 'montana'];
   let southwest = ['texas', 'nevada', 'arizona', 'colorado', 'california', 'utah', 'new mexico', 'oklahoma'];
   let midwest = ['north dakota', 'south dakota', 'nebraska', 'kansas', 'minnesota', 'iowa', 'indiana', 'michigan', 'wisconsin', 'illinois', 'ohio', 'kentucky', 'missouri'];
   let south = [ 'west virginia', 'virginia', 'north carolina', 'south carolina', 'tennessee', 'mississippi', 'alabama', 'georgia', 'florida', 'arkansas'];
-  let northeast = ['maine', 'new hampshire', 'vermont', 'new york', 'massaschussetts', 'connecticut', 'rhode island', 'new jersey', 'pennsylvania', 'maryland', 'delaware'];
+  let northeast = ['maine', 'new hampshire', 'vermont', 'new york', 'massachusetts', 'connecticut', 'rhode island', 'new jersey', 'pennsylvania', 'maryland', 'delaware'];
     if (userState === pacific) {
         return produce
     }
