@@ -45,4 +45,44 @@ let snapPeas = new Produce('snappeas', 'https://i.imgur.com/9LOer8w.jpg', 'Snap 
 let peanuts = new Produce('peanuts', 'https://i.imgur.com/aumOJ8r.jpg', 'Peanuts can often be purchased in their distinctive, textured shell either dry roasted or roasted in oil. Be sure to store peanuts in a cool, dry place and discard any peanuts that show signs of mold.');
 let snowPeas = new Produce('snowpeas', 'https://i.imgur.com/j1PRQib.jpg.jpeg', 'Good snow peas will be bright green with thin, flexible pods. Snow peas are mildly flavored and can be served raw or cooked.');
 
-export let produceArrObject = [asparagus, broccoli, cabbage, kale, lettuce, nopal, onion, olive, raddish, tomato, apple, blueberry, cantaloupe, cherry, grape, nectarine, strawberry, watermelon, orange, pineapple, adzuki, blackEyedPeas, chickpeas, greenBeans, limaBeans, shellBeans, peas, snapPeas, peanuts, snowPeas];
+export let produceArrObject = [asparagus, broccoli, cabbage, kale, lettuce, nopal, onion, olive, radish, tomato, apple, blueberry, cantaloupe, cherry, grape, nectarine, strawberry, watermelon, orange, pineapple, adzuki, blackEyedPeas, chickpeas, greenBeans, limaBeans, shellBeans, peas, snapPeas, peanuts, snowPeas];
+
+export let northEastFall = [broccoli, cabbage, kale, lettuce, apple, grape, onion, radish];
+
+export let northEastWinter = ['There is no fresh produce for this season... yet!'];
+
+export let northEastSpring = [asparagus, broccoli, cabbage, kale, lettuce, cherry, radish, strawberry, peas, blackEyedPeas, snowPeas];
+
+export let northEastSummer = [asparagus, cabbage, kale, lettuce, apple, blueberry, cantaloupe, cherry, grape, greenBeans, onion, radish, tomato, nectarine, strawberry, watermelon, peas, blackEyedPeas, snowPeas];
+
+export let northWestFall = [apple, grape, onion, cabbage, kale, lettuce, cantaloupe, radish, tomato, chickpeas];
+
+export let northWestSpring= [asparagus, cabbage, kale, lettuce, radish, strawberry, snapPeas];
+
+export let northWestWinter = [cabbage, kale, lettuce, chickpeas, snapPeas];
+
+export let northWestSummer = [asparagus, broccoli, cabbage, kale, lettuce, apple, blueberry, cantaloupe, cherry, grape, onion, radish, tomato, strawberry, watermelon, adzuki, snowPeas];
+
+export let southWestFall = [broccoli, kale, lettuce, apple, greenBeans, radish, tomato, nopal, chickpeas, peanuts, limaBeans];
+
+export let southWestWinter = [broccoli, cabbage, kale, lettuce, radish, strawberry, orange, chickpeas];
+
+export let southWestSpring = [asparagus, broccoli, cabbage, kale, lettuce, onion, radish, tomato, nectarine, strawberry, orange, peas, blackEyedPeas, snowPeas];
+
+export let southWestSummer = [apple, blueberry, cantaloupe, grape, greenBeans, onion, tomato, nectarine, watermelon, nopal, blackEyedPeas, limaBeans];
+
+export let midWestFall = [broccoli, cabbage, kale, lettuce, apple, onion, radish, tomato, chickpeas, shellBeans];
+
+export let midWestWinter = [chickpeas, snapPeas];
+
+export let midWestSpring = [snapPeas, asparagus, lettuce, radish, blackEyedPeas];
+
+export let midWestSummer = [shellBeans, asparagus, broccoli, cabbage, kale, lettuce, apple, blueberry, cantaloupe, cherry, grape, onion, radish, tomato, strawberry, watermelon, blackEyedPeas, adzuki];
+
+export let southFall = [cabbage, kale, lettuce, apple, grape, tomato, peanuts, chickpeas];
+
+export let southWinter = [apple, kale, lettuce, orange];
+
+export let southSpring = [snowPeas, asparagus, broccoli, cabbage, lettuce, blueberry, greenBeans, tomato, strawberry, orange, blackEyedPeas];
+
+export let southSummer = [snowPeas, asparagus, apple, blueberry, cantaloupe, grape, greenBeans, tomato, watermelon, orange, peas];
