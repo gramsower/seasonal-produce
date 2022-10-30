@@ -101,11 +101,13 @@ const displayProduce = (prodArrToDisp) => {
 
 displayProduce(prodArrToDisp);
 
-function handle() {
+function handle(event) {
+  event.preventDefault();
   getLocation();
 }
 
 window.addEventListener('load', function() {
+  this.addEventListener("click");
   handle();
 });
 
