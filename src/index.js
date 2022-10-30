@@ -1,10 +1,10 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import { produceArrObject } from './js/produceLib';
+import { produceArrObject, northEastFall, northEastSpring, northEastSummer, northEastWinter, northWestSpring, northWestSummer, northWestFall, northWestWinter, southWestFall, southWestSpring, southWestSummer, southWestWinter, midWestFall, midWestSpring, midWestSummer, midWestWinter, southFall, southSpring, southSummer, southWinter} from './js/produceLib';
 import IPLocate from './js/ipAPI';
-import Recipe from './js/recipeAPI';
-import determineSeason from './js/seasonality';
+// import Recipe from './js/recipeAPI';
+// import determineSeason from './js/seasonality';
 
 
 async function getLocation() {
@@ -35,12 +35,14 @@ function determineUserRegion(userState) {
 function determineUserSeason(date) {
   let month = date.slice(0, 2);
   let day = date.slice(3, 5);
+  console.log(month);
+  console.log(day);
   if (month === ('01' || '02')) {
     return 'winter';
   } else if (month === '03' && day <= '20') {
-      return 'winter';
+    return 'winter';
   } else if (month === '03') {
-      return 'spring';
+    return 'spring';
   } else if (month === ('04' || '05')) {
     return 'spring';
   } else if (month === '06' && day <= '20') {
@@ -61,32 +63,60 @@ function determineUserSeason(date) {
     return 'winter';
   } else {
     return 'error getting the current season in your location';
-  };
-};
+  }
+}
 
-//function determineProduce(determineUserRegion, determineUserSeason) {
-// let produceArray = [];
+function determineProduce(determineUserRegion, determineUserSeason) {
+  // let produceArray = [];
+  let userRegion = determineUserRegion;
+  let userSeason = determineUserSeason;
+  if (userRegion === 'northwest' && userSeason === 'fall') {
+    return northWestFall;
+  } else if (userRegion === 'northwest' && userSeason === 'winter') {
+    return northWestWinter;
+  } else if (userRegion === 'northwest' && userSeason === 'spring') {
+    return northWestSpring;
+  } else if (userRegion === 'northwest' && userSeason === 'summer') {
+    return northWestSummer;
+  } else if (userRegion === 'southwest' && userSeason === 'winter') {
+    return southWestWinter;
+  } else if (userRegion === 'southwest' && userSeason === 'spring') {
+    return southWestSpring;
+  } else if (userRegion === 'southwest' && userSeason === 'summer') {
+    return southWestSummer;
+  } else if (userRegion === 'southwest' && userSeason === 'fall') {
+    return southWestFall;
+  } else if (userRegion === 'midwest' && userSeason === 'winter') {
+    return midWestWinter;
+  } else if (userRegion === 'midwest' && userSeason === 'spring') {
+    return midWestSpring;
+  } else if (userRegion === 'midwest' && userSeason === 'fall') {
+    return midWestFall;
+  } else if (userRegion === 'midwest' && userSeason === 'summer') {
+    return midWestSummer;
+  } else if (userRegion === 'south' && userSeason === 'winter') {
+    return southWinter;
+  } else if (userRegion === 'south' && userSeason === 'spring') {
+    return southSpring;
+  } else if (userRegion === 'south' && userSeason === 'summer') {
+    return southSummer;
+  } else if (userRegion === 'south' && userSeason === 'fall') {
+    return southFall;
+  } else if (userRegion === 'northeast' && userSeason === 'winter') {
+    return northEastWinter;
+  } else if (userRegion === 'northeast' && userSeason === 'spring') {
+    return northEastSpring;
+  } else if (userRegion === 'northeast' && userSeason === 'summer') {
+    return northEastSummer;
+  } else if (userRegion === 'northeast' && userSeason === 'fall') {
+    return northEastFall;
+  } else {
+    return produceArrObject;
+  }
+}
 
-// produceArray.push(produce);
-// }
-// ??? think Jonathan was working on using switch cases that determines only the seasonal availability of produces and not region based availability
-
-
-const prodArrToDisp = produceArrObject;
+const prodArrToDisp = determineProduce();
 console.log(prodArrToDisp);
-
-//function produceDisplay(determineProduce) { **not final function just a general idea**
-// let produceArray = [];
-// 
-// for (let i = 0; i < prodArrToDisp.length; i++) {
-//  for (let j = 0; j < determineProduce.length; j++) {
-//   if (prodArrToDisp[i] === determineProduce[j]) {
-//      produceArray.push(prodArrToDisp[i]);
-//   }      
-//  }
-// }
-//}
-//function to compare produce we need to display (determined by region and season), put this result into displayProduce()
 
 const displayProduce = (prodArrToDisp) => {
   const displayDiv = document.querySelector('#card-content');
@@ -106,6 +136,7 @@ displayProduce(prodArrToDisp);
 function handle() {
   getLocation();
 }
+
 
 window.addEventListener('load', function() {
   handle();
