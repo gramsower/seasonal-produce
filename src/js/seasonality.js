@@ -1,4 +1,4 @@
-function determineseason(produce){
+/* function determineseason(produce){
   let season;
   switch (produce){
     case 'apple':
@@ -11,7 +11,7 @@ function determineseason(produce){
     case 'radish':
     case 'tomato':
     case 'chick peas':
-    case 'orca beans':
+    // case 'orca beans':
       season = 'NorthWest Fall';
       break;
     case 'cabbage':
@@ -29,7 +29,7 @@ function determineseason(produce){
       season = 'NorthWest Spring';
       break;
     case  'asparagus':
-    case  'brocoli':
+    case  'broccoli':
     case  'cabbage':
     case  'kale':
     case  'lettuce':
@@ -47,7 +47,7 @@ function determineseason(produce){
     case  'Orca beans':
       season = 'NorthWest Summer';
       break;
-    case 'brocoli':
+    case 'broccoli':
     case 'kale':
     case 'lettuce':
     case 'apple':
@@ -60,7 +60,7 @@ function determineseason(produce){
     case 'lima beans':
       season = 'SouthWest Fall';
       break;
-    case 'brocoli':
+    case 'broccoli':
     case 'cabbage':
     case 'kale':
     case 'lettuce':
@@ -71,7 +71,7 @@ function determineseason(produce){
       season = 'SouthWest Winter';
       break;
     case 'asparagus':
-    case 'brocoli':
+    case 'broccoli':
     case 'cabbage':
     case 'kale':
     case 'lettuce':
@@ -99,7 +99,7 @@ function determineseason(produce){
     case 'lima beans':
       season = 'SouthWest Summer';
       break;
-    case 'brocoli':
+    case 'broccoli':
     case 'cabbage':
     case 'kale':
     case 'lettuce':
@@ -122,7 +122,7 @@ function determineseason(produce){
       season = 'MidWest Spring'
       break;
     case 'asparagus':
-    case 'brocoli':
+    case 'broccoli':
     case 'cabbage':
     case 'kale':
     case 'lettuce':
@@ -159,7 +159,7 @@ function determineseason(produce){
       season = 'South Winter';
       break;
     case  'asparagus':
-    case  'brocoli':
+    case  'broccoli':
     case  'cabbage':
     case  'lettuce':
     case  'blueberry':
@@ -182,7 +182,7 @@ function determineseason(produce){
     case 'peas':
       season = 'South Summer'
       break;
-    case 'brocoli':
+    case 'broccoli':
     case 'cabbage':
     case 'kale':
     case 'lettuce':
@@ -196,7 +196,7 @@ function determineseason(produce){
       season = 'Northeast Winter';
       break;
     case 'asparagus':
-    case 'brocoli':
+    case 'broccoli':
     case 'cabbage':
     case 'kale':
     case 'lettuce':
@@ -231,7 +231,7 @@ function determineseason(produce){
   }
 return season;
 }
-
+*/
 //NorthWest Fall Season
 // Apple
 // Grapes
