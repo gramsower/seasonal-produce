@@ -5,18 +5,14 @@ import { produceArrObject } from './js/produceLib';
 import IPLocate from './js/ipAPI';
 import Recipe from './js/recipeAPI';
 
+
 async function getLocation() {
   const response = await IPLocate.getLocation();
   let userState = response.state_prov;
   let dateReturned = response.time_zone.current_time;
   let date = dateReturned.slice(5, 10);
   determineUserRegion(userState);
-}
-async function getRecipe(searchInput) {
-  const response = await Recipe.getRecipe(searchInput);
-  return response;
-  //need event listener that display recipes for a specific produce which would be what the searchInput parameter becomes
-  //need function to display recipe options
+  determineUserSeason(date);
 }
 
 function determineUserRegion(userState) {
@@ -36,36 +32,44 @@ function determineUserRegion(userState) {
 }
 
 function determineUserSeason(date) {
-  let month = date.slice(0,2);
+  let month = date.slice(0, 2);
   let day = date.slice(3, 5);
  // console.log(day);
-  if (month === ('10' || '11')) {
-    return 'fall';
+  if (month == ('10' || '11')) {
+    return 'fall'; 
   } else if (month == ('1' || '2')) {
-    return'winter';
+    return 'winter'; 
   } else if (month == ('4' || '5')) {
-    return 'spring';
+    return 'spring'; 
   } else if (month == ('7' || '8')) {
-    return 'summer';
+    return 'summer'; 
   } else {
     return 'error retrieving season';
   }
 }
 
-//function printElements() {
-//   console.log(response.state_prov);
+//function determineProduce(determineUserRegion, determineUserSeason) {
+// let produceArray = [];
+// produceArray.push(produce);
 // }
+// ??? think Jonathan was working on using switch cases that determines only the seasonal availability of produces and not region based availability
 
-function handle() {
-  getLocation();
-}
-
-window.addEventListener('load', function() {
-  document.querySelector('form').addEventListener('submit', handle());
-});
 
 const prodArrToDisp = produceArrObject;
 console.log(prodArrToDisp);
+
+//function produceDisplay(determineProduce) { **not final function just a general idea**
+// let produceArray = [];
+// 
+// for (let i = 0; i < prodArrToDisp.length; i++) {
+//  for (let j = 0; j < determineProduce.length; j++) {
+//   if (prodArrToDisp[i] === determineProduce[j]) {
+//      produceArray.push(prodArrToDisp[i]);
+//   }      
+//  }
+// }
+//}
+//function to compare produce we need to display (determined by region and season), put this result into displayProduce()
 
 const displayProduce = (prodArrToDisp) => {
   const displayDiv = document.querySelector('#card-content');
@@ -81,3 +85,21 @@ const displayProduce = (prodArrToDisp) => {
 };
 
 displayProduce(prodArrToDisp);
+
+function handle() {
+  getLocation();
+}
+
+window.addEventListener('load', function() {
+  handle();
+});
+
+// when browser loads it gets user's location and date (based on IP address) 
+// then location is passed into a function that determines user's region 
+// the date is passed into a function that determines season 
+// both season and region are passed into a function that determines what produce are available in that season and region
+// when it determines which produces to display, it passes it into a function that displays those produce and it's details
+// then for each produce that's displayed
+// STRETCH GOALS WITH RECIPE API
+// it will make api recipe calls for each produce that is displayed
+// it will display the recipes for each produce
