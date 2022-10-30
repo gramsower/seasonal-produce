@@ -28,10 +28,10 @@ function determineUserRegion(userState) {
     return 'midwest';
   } else if (userState === ('west virginia' || 'virginia' || 'north carolina' || 'south carolina' || 'tennessee' || 'mississippi' || 'alabama' || 'georgia' || 'florida' || 'arkansas')) {
     return 'south';
-  } else if (userState === ('maine' || 'new hampshire' || 'vermont' || 'new york' || 'massachussetts' || 'connecticut' || 'rhode island' || 'new jersey' || 'pennsylvania' || 'maryland' || 'delaware')) {
+  } else if (userState === ('maine' || 'new hampshire' || 'vermont' || 'new york' || 'massachusetts' || 'connecticut' || 'rhode island' || 'new jersey' || 'pennsylvania' || 'maryland' || 'delaware')) {
     return 'northeast';
   } else {
-    return ''Your location could not be determined', no region available';
+    return "'Your location could not be determined', no region available";
   }
 }
 
@@ -48,7 +48,7 @@ function determineUserSeason(date) {
   } else if (month == ('7' || '8')) {
     return 'summer';
   } else {
-    return 'error retreiving season';
+    return 'error retrieving season';
   }
 }
 
