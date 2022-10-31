@@ -12,19 +12,21 @@ async function getLocation() {
   let date = dateReturned.slice(5, 10);
   determineUserRegion(userState);
   determineUserSeason(date);
+  console.log(userState);
+  console.log(date);
 }
 
 function determineUserRegion(userState) {
   let region;
-  if (userState.toLowerCase() === ('washington' || 'oregon' || 'idaho' || 'wyoming' || 'montana')) {
+  if (userState.toLowerCase() === ('washington' && 'oregon' && 'idaho' && 'wyoming' && 'montana')) {
     region = 'northwest';
-  } else if (userState.toLowerCase() === ('texas' || 'nevada' || 'arizona' || 'colorado' || 'california' || 'utah' || 'new mexico' || 'oklahoma')) {
+  } else if (userState.toLowerCase() === ('texas' && 'nevada' && 'arizona' && 'colorado' && 'california' && 'utah' && 'new mexico' && 'oklahoma')) {
     region = 'southwest';
-  } else if (userState.toLowerCase() === ('north dakota' || 'south dakota' || 'nebraska' || 'kansas' || 'minnesota' || 'iowa' || 'indiana' || 'michigan' || 'wisconsin' || 'illinois' || 'ohio' || 'kentucky' || 'missouri')) {
+  } else if (userState.toLowerCase() === ('north dakota' && 'south dakota' && 'nebraska' && 'kansas' && 'minnesota' && 'iowa' && 'indiana' && 'michigan' && 'wisconsin' && 'illinois' && 'ohio' && 'kentucky' && 'missouri')) {
     region = 'midwest';
-  } else if (userState.toLowerCase() === ('west virginia' || 'virginia' || 'north carolina' || 'south carolina' || 'tennessee' || 'mississippi' || 'alabama' || 'georgia' || 'florida' || 'arkansas')) {
+  } else if (userState.toLowerCase() === ('west virginia' && 'virginia' && 'north carolina' && 'south carolina' && 'tennessee' && 'mississippi' && 'alabama' && 'georgia' && 'florida' && 'arkansas')) {
     region = 'south';
-  } else if (userState.toLowerCase() === ('maine' || 'new hampshire' || 'vermont' || 'new york' || 'massachusetts' || 'connecticut' || 'rhode island' || 'new jersey' || 'pennsylvania' || 'maryland' || 'delaware')) {
+  } else if (userState.toLowerCase() === ('maine' && 'new hampshire' && 'vermont' && 'new york' && 'massachusetts' && 'connecticut' && 'rhode island' && 'new jersey' && 'pennsylvania' && 'maryland' && 'delaware')) {
     region = 'northeast';
   } else {
     region = 'Your location could not be determined, no region available';
@@ -37,8 +39,8 @@ function determineUserSeason(date) {
   let month = date.slice(0, 2);
   let day = date.slice(3, 5);
   let season;
-  // console.log(month);
-  // console.log(day);
+  console.log(month);
+  console.log(day);
   if (month === ('01' || '02')) {
     season =  'winter';
   } else if (month === '03' && day <= '20') {
