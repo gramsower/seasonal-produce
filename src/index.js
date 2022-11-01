@@ -12,8 +12,8 @@ async function getLocation() {
   let date = dateReturned.slice(5, 10);
   determineUserRegion(userState);
   determineUserSeason(date);
-  console.log(userState);
-  console.log(date);
+//   console.log(userState);
+//   console.log(date);
 }
 
 function determineUserRegion(userState) {
