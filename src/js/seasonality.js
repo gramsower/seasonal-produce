@@ -1,237 +1,69 @@
-/* function determineseason(produce){
-  let season;
-  switch (produce){
-    case 'apple':
-    case 'grape':
-    case 'onions':
-    case 'cabbage':
-    case 'kale':
-    case 'lettuce':
-    case 'cantaloupe':
-    case 'radish':
-    case 'tomato':
-    case 'chick peas':
-    // case 'orca beans':
-      season = 'NorthWest Fall';
+export function determineUserRegion(userState) {
+  let region;
+  switch (userState.toLowerCase()) {
+    case 'washington':
+    case 'oregon':
+    case 'idaho':
+    case 'wyoming':
+    case 'montana':
+      region = 'northwest';
       break;
-    case 'cabbage':
-    case 'kale':
-    case 'lettuce':
-    case 'chickpeas':
-      season = 'NorthWest Winter';
+    case 'texas':
+    case 'nevada':
+    case 'arizona':
+    case 'colorado':
+    case 'california':
+    case 'utah':
+    case 'new mexico':
+    case 'oklahoma':
+      region= 'southwest';
       break;
-    case  'asparagus':
-    case  'cabbage':
-    case  'kale':
-    case  'lettuce':
-    case  'radish':
-    case  'strawberry':
-      season = 'NorthWest Spring';
+    case 'north dakota':
+    case 'south dakota':
+    case 'nebraska':
+    case 'kansas':
+    case 'minnesota':
+    case 'iowa':
+    case 'indiana':
+    case 'michigan':
+    case 'wisconsin':
+    case 'illinois':
+    case 'ohio':
+    case 'kentucky':
+    case 'missouri':
+      region = 'midwest';
       break;
-    case  'asparagus':
-    case  'broccoli':
-    case  'cabbage':
-    case  'kale':
-    case  'lettuce':
-    case  'apple':
-    case  'blueberry':
-    case  'cantaloupe':
-    case  'cherry':
-    case  'grape':
-    case  'onion':
-    case  'radish':
-    case  'tomato':
-    case  'strawberry':
-    case  'watermelon':
-    case  'adzuki beans':
-    case  'Orca beans':
-      season = 'NorthWest Summer';
+    case 'west virginia':
+    case 'virginia':
+    case 'north carolina':
+    case 'south carolina':
+    case 'tennessee':
+    case 'mississippi':
+    case 'alabama':
+    case 'georgia':
+    case 'florida':
+    case 'arkansas':
+      region= 'south';
       break;
-    case 'broccoli':
-    case 'kale':
-    case 'lettuce':
-    case 'apple':
-    case 'green beans':
-    case 'radish':
-    case 'tomato':
-    case 'nopal':
-    case 'chickpeas':
-    case 'peanuts':
-    case 'lima beans':
-      season = 'SouthWest Fall';
+    case 'maine':
+    case 'new hampshire':
+    case 'vermont':
+    case 'new york':
+    case 'massachusetts':
+    case 'connecticut':
+    case 'rhode island':
+    case 'new jersey':
+    case 'pennyslvania':
+    case 'maryland':
+    case 'delaware':
+      region = 'northeast';
       break;
-    case 'broccoli':
-    case 'cabbage':
-    case 'kale':
-    case 'lettuce':
-    case 'radish':
-    case 'strawberry':
-    case 'oranges':
-    case 'chickpeas':
-      season = 'SouthWest Winter';
-      break;
-    case 'asparagus':
-    case 'broccoli':
-    case 'cabbage':
-    case 'kale':
-    case 'lettuce':
-    case 'onions':
-    case 'radish':
-    case 'tomato':
-    case 'nectarine':
-    case 'strawberry':
-    case 'orange':
-    case 'peas':
-    case 'black-eyed peas':
-      season = 'SouthWest Spring';
-      break;
-    case 'apple':
-    case 'blueberry':
-    case 'cantaloupe':
-    case 'grape':
-    case 'green beans':
-    case 'onion':
-    case 'tomato':
-    case 'nectarine':
-    case 'watermelon':
-    case 'nopal':
-    case 'black-eyed peas':
-    case 'lima beans':
-      season = 'SouthWest Summer';
-      break;
-    case 'broccoli':
-    case 'cabbage':
-    case 'kale':
-    case 'lettuce':
-    case 'apple':
-    case 'onion':
-    case 'radish':
-    case 'tomato':
-    case 'chickpeas':
-    case 'soy beans':
-    case 'navy beans':
-      season = 'MidWest Fall';
-      break;
-    case 'chickpeas':
-      season = 'MidWest Winter';
-      break;
-    case 'asparagus':
-    case 'lettuce':
-    case 'radish':
-    case 'black-eyed peas':   
-      season = 'MidWest Spring'
-      break;
-    case 'asparagus':
-    case 'broccoli':
-    case 'cabbage':
-    case 'kale':
-    case 'lettuce':
-    case 'apple':
-    case 'blueberry':
-    case 'cantaloupe':
-    case 'cherry':
-    case 'grape':
-    case 'onion':
-    case 'radish':
-    case 'tomato':
-    case 'strawberry':
-    case 'watermelon':
-    case 'black-eyed peas':
-    case 'adzuki beans':
-    case 'navy beans':
-      season = 'Midwest Summer';
-      break;
-    case 'cabbage':
-    case 'kale':
-    case 'lettuce':
-    case 'apple':
-    case 'grape':
-    case 'tomato':
-    case 'peanuts':
-    case 'Chickpeas':
-    case 'Chickpeas':
-      season = 'South Fall';
-      break;
-    case 'apple':
-    case 'kale':
-    case 'lettuce':
-    case 'orange':
-      season = 'South Winter';
-      break;
-    case  'asparagus':
-    case  'broccoli':
-    case  'cabbage':
-    case  'lettuce':
-    case  'blueberry':
-    case  'green beans':
-    case  'tomato':
-    case  'strawberry':
-    case  'orange':
-    case  'black-eyed peas':
-      season = 'South Spring';
-      break;
-    case 'asparagus':
-    case 'apple':
-    case 'blueberry':
-    case 'cantaloupe':
-    case 'grape':
-    case 'green beans':
-    case 'tomato':
-    case 'watermelon':
-    case 'orange':
-    case 'peas':
-      season = 'South Summer'
-      break;
-    case 'broccoli':
-    case 'cabbage':
-    case 'kale':
-    case 'lettuce':
-    case 'apple':
-    case 'grape':
-    case 'onion':
-    case 'radish':
-      season = 'Northeast Fall';
-      break;
-    case 'Ooops, too cold!! brrrr ':
-      season = 'Northeast Winter';
-      break;
-    case 'asparagus':
-    case 'broccoli':
-    case 'cabbage':
-    case 'kale':
-    case 'lettuce':
-    case 'cherry':
-    case 'radish':
-    case 'strawberry':
-    case 'peas':
-    case 'black-eyed peas':
-      season = 'Northeast Spring';
-      break;
-    case 'asparagus':
-    case 'cabbage':
-    case 'kale':
-    case 'lettuce':
-    case 'apple':
-    case 'blueberry':
-    case 'cantaloupe':
-    case 'cherry':
-    case 'grape':
-    case 'green beans':
-    case 'beans':
-    case 'onion':
-    case 'radish':
-    case 'tomato':
-    case 'nectarine':
-    case 'strawberry':
-    case 'watermelon':
-    case 'peas':
-    case 'black-eyed peas':
-      season = 'Northeast Summer';
-      break;
+    case 'error':
+    region = 'Your location could not be determined, no region available';
   }
-return season;
+  return region;
 }
-*/
+
 //NorthWest Fall Season
 // Apple
 // Grapes
@@ -246,12 +78,12 @@ return season;
 // Orca Beans
 // 
 // 
-// 
 //NorthWest Winter Season
 // Cabbage
 // Kale
 // Lettuce
 // Chickpeas
+
 //NorthWest Spring Season
 // Asparagus
 // Cabbage

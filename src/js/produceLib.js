@@ -18,7 +18,7 @@ let lettuce = new Produce('lettuce', 'https://i.imgur.com/7BcFvJg.jpg', 'There a
 let nopal = new Produce('nopal', 'https://i.imgur.com/jrimZGW.jpg', 'Nopales are the leaves of the prickly pear cactus. Harvesting young pads makes for a much easier time removing spines, although some vendors sell them with the spines already removed.');
 let onion = new Produce('onion', 'https://i.imgur.com/YzbB9EU.jpg', 'When purchasing dried onions, avoid brown or mushy spots and choose onions that feel heavy for their size without any signs of sprouting.');
 let olive = new Produce('olive', 'https://i.imgur.com/Y74ZtVG.jpg', 'Olives come in a variety of colors and may come whole or with the pit alread removed. Fresh, cured olives should be kept in the refrigerator to extend their life for a few weeks.');
-let radish = new Produce('raddish', 'https://i.imgur.com/WzU4iqN.jpg', 'Most radishes are sold with the tops attached: look for vibrant greens and firm roots. Do not forget you can saute the tops or use them in pesto!');
+let radish = new Produce('radish', 'https://i.imgur.com/WzU4iqN.jpg', 'Most radishes are sold with the tops attached: look for vibrant greens and firm roots. Do not forget you can saute the tops or use them in pesto!');
 let tomato = new Produce('tomato', 'https://i.imgur.com/FcRmNil.jpg', 'Tomatoes come in a dizzying array of colors and shapes, so rather than relying on color alone, look for tomatoes that are heavy and fragrant. Some scarring is normal on heirloom varieties, but avoid tomatoes with freshly torn skin.');
 
 //Fruits
