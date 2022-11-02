@@ -18,25 +18,25 @@ function determineUserSeason(date) {
   let month = date.slice(0, 2);
   let day = date.slice(3, 5);
   let season;
-  if (month === ('01' || '02')) {
+  if (month === '01' || month === '02') {
     season =  'winter';
   } else if (month === '03' && day <= '20') {
     season = 'winter';
   } else if (month === '03') {
     season = 'spring';
-  } else if (month === ('04' || '05')) {
+  } else if (month === '04' || month === '05') {
     season = 'spring';
   } else if (month === '06' && day <= '20') {
     season = 'spring';
   } else if (month === '06') {
     season = 'summer';
-  } else if (month === ('07' || '08')) {
+  } else if (month === '07' || month === '08') {
     season = 'summer';
   } else if (month === '09' && day <= '20') {
     season = 'summer';
   } else if (month === '09') {
     season = 'fall';
-  } else if (month === ('10' || '11')) {
+  } else if (month === '10' || month === '11') {
     season = 'fall';
   } else if (month === '12' && day <= '20') {
     season = 'fall';
@@ -112,6 +112,8 @@ function loadProduce(event) {
   event.preventDefault();
   getLocation();
 }
+
+
 
 window.addEventListener('load', function() {
   document.querySelector("#produce").addEventListener("click", loadProduce);
