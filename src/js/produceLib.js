@@ -36,7 +36,7 @@ let pineapple = new Produce('pineapple', 'https://i.imgur.com/VHK2HhH.jpg', 'To 
 //Legumes
 let adzuki = new Produce('adzuki', 'https://i.imgur.com/xpVJRYx.jpg', 'The bean is usually found dried. In East Asain cuisine, it is commonly sweetened by boiling with sugar and made into a past before eating.');
 let blackEyedPeas = new Produce('black-eyed peas', 'https://i.imgur.com/anRP2Ey.jpg', 'When it comes to fresh shell beans, look for pods that are plump and bumpy, you should be able to feel the fat seeds inside.');
-let chickpeas = new Produce('cheakpeas', 'https://i.imgur.com/EvjBS9S.jpg', 'Also known as garbanzo beans, the fresh green pods (and seeds inside) are edible, but most are harvested dried. Chickpea leaves are also edible.');
+let chickpeas = new Produce('chickpeas', 'https://i.imgur.com/EvjBS9S.jpg', 'Also known as garbanzo beans, the fresh green pods (and seeds inside) are edible, but most are harvested dried. Chickpea leaves are also edible.');
 let greenBeans = new Produce('green beans', 'https://i.imgur.com/pkCFokZ.jpg', 'Fresh green beans should have a snappy crispness when bent in half. They should be free of blemishes and mold and the pod should not be hard or dried out.');
 let limaBeans = new Produce('lima beans', 'https://i.imgur.com/bKrqDRh.jpg', 'Lima beans are a type of shell bean and can be purchased either fresh in the pod or dried. If buying fresh, look for plump and bumpy pods.');
 let shellBeans = new Produce('shellbeans', 'https://i.imgur.com/NBw32ck.jpg', 'Fresh shell beans cook much quicker than their dried out counterparts. Look for pods that have pronounced, evenly sized bumps and avoid those with noticeable empty spots.');

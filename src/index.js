@@ -18,19 +18,19 @@ function determineUserSeason(date) {
   let month = date.slice(0, 2);
   let day = date.slice(3, 5);
   let season;
-  if (month === '01' || month === '02') { 
-    season = 'winter';
+  if (month === '01' || month === '02') {
+    season =  'winter';
   } else if (month === '03' && day <= '20') {
     season = 'winter';
   } else if (month === '03') {
     season = 'spring';
-  } else if (month === ('04' || '05')) {
+  } else if (month === '04' || month === '05') {
     season = 'spring';
   } else if (month === '06' && day <= '20') {
     season = 'spring';
   } else if (month === '06') {
     season = 'summer';
-  } else if (month === ('07' || '08')) {
+  } else if (month === '07' || month === '08') {
     season = 'summer';
   } else if (month === '09' && day <= '20') {
     season = 'summer';
@@ -44,7 +44,7 @@ function determineUserSeason(date) {
     season = 'winter';
   } else {
     season = 'error getting the current season in your location';
-  }console.log(season);
+  }
   return season;
 }
 
@@ -112,6 +112,9 @@ function loadProduce(event) {
   event.preventDefault();
   getLocation();
 }
+
+// add event listener for click on produce card
+// use template literal to call recipe API and return 5 recipes containing the selected produce
 
 window.addEventListener('load', function() {
   document.querySelector("#produce").addEventListener("click", loadProduce);
