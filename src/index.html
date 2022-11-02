@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>Seasonal Produce</title>
+  <title>Seasonal Produce | Welcome</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Seasonal Produce</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <header>
+    <nav id= "navbar" lass="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="conatiner">
+        <h1 clas="logo"><a class="navbar-brand" href="#">Seasonal Produce</a></h1>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Produce</a></li>
+          <li><a href="">Recipes</a></li>
+          <!-- <li><a href="">Source</a></li> -->
+          <li><a href="">Contact</a></li>
+          <!-- <li><a href="">Additional Resources</a></li> -->
+          <!-- <li><a href="">Donate</a></li> -->
+        </ul>
+      </div>
+    
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="">Home</a>
-        </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+        
+      <!-- <ul lass="navbar-nav mr-auto">
+        <li lass="nav-item active">
+          <a lass="nav-link" href="">Home</a></li>
         <li class="nav-item">
           <a class="nav-link" href="">Produce</a>
         </li>
@@ -29,21 +42,34 @@
         <li class="nav-item">
           <a class="nav-link" href="">Additional Resource</a>
         </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
+      </ul> -->
+    
+      <!-- <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
+      </form> -->
+
+    <!-- </div> -->
   </nav>
-  <div class="container">
-    <h1>Veg Headz</h1>
-    <p>Curious about what's in season in your area? Click "search near me" to access a list of produce and recipe ideas based on your location.</p>
-    <p>Optionally, you may search other regions by specifying the location in the "location" input.</p>
-    <div class="produce">
-      <button class="btn btn-outline-success my-2 my-sm-0" id="produce">Get Produce</button>
+  <div id="showcase">
+    <div class="container">
+      <div class="showcase-content">
+        <h1><span class="text-prim">Veg</span> Headz</h1>
+        <p class="lead">Curious about what's in season in your area? Click "Get Produce" to access a list of produce and recipe ideas based on your location.</p>
+        <!-- <p>Optionally, you may search other regions by specifying the location in the "location" input.</p> -->
+        <button class="btn" id="produce">Get Produce</button>
+      </div>
     </div>
   </div>
+</header>
+   <!-- <div class="container">
+    
+  
+    <div class="produce"> -->
+      
+    <!-- </div>
+    <button class="btn" id="produce">Get Produce</button>
+  </div> -->
   
   <div class="card-container">
     <div id="card-content"></div>

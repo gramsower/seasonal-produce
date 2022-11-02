@@ -18,8 +18,8 @@ function determineUserSeason(date) {
   let month = date.slice(0, 2);
   let day = date.slice(3, 5);
   let season;
-  if (month === ('01' || '02')) {
-    season =  'winter';
+  if (month === '01' || month === '02') { 
+    season = 'winter';
   } else if (month === '03' && day <= '20') {
     season = 'winter';
   } else if (month === '03') {
@@ -36,7 +36,7 @@ function determineUserSeason(date) {
     season = 'summer';
   } else if (month === '09') {
     season = 'fall';
-  } else if (month === ('10' || '11')) {
+  } else if (month === '10' || month === '11') {
     season = 'fall';
   } else if (month === '12' && day <= '20') {
     season = 'fall';
@@ -44,7 +44,7 @@ function determineUserSeason(date) {
     season = 'winter';
   } else {
     season = 'error getting the current season in your location';
-  }
+  }console.log(season);
   return season;
 }
 
