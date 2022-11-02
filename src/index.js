@@ -113,7 +113,8 @@ function loadProduce(event) {
   getLocation();
 }
 
-
+// add event listener for click on produce card
+// use template literal to call recipe API and return 5 recipes containing the selected produce
 
 window.addEventListener('load', function() {
   document.querySelector("#produce").addEventListener("click", loadProduce);
