@@ -1,16 +1,121 @@
-body {
-  background-color: #d6b69e;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  color: #344b3c;
-  text-align: center;
+/* Main Styling */
+html, body {
+  background-color: #d6b69e;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+}
+
+a{
+  color:#333;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  /* color: #185a2f; */
+  /* text-align: center; */
+  padding-bottom: 20px;
 }
 
 p {
-  color: #626542;
-  text-align: center;
+  /* color: #626542;
+  text-align: center; */
+  margin: 20px 0;
 }
+
+
+/* Utility Classes */
+.conatiner{
+  margin: auto;
+  max-width: 1100px;
+  padding-top:10px
+ }
+
+ .text-prim{
+  color:#1ab127
+ }
+
+ .lead{
+  font-size: 25px;
+ }
+
+/* Navbar */
+#navbar {
+  background: #333;
+  color: #fff;
+  overflow: auto;
+}
+
+#navbar a{
+  color:#fff;
+}
+
+#navbar h1{
+  float:left;
+  padding: top 20px;
+}
+
+#navbar ul{
+  list-style: none;
+  float: right;
+}
+
+#navbar ul li {
+  float: left;
+}
+
+#navbar ul li a{
+  display: block;
+  padding: 20px;
+  text-align: center;
+  }
+
+  #navbar ul li a:hover{
+    background: #444;
+    color:#f7c08a;
+  }
+
+/* Showcase */
+#showcase{
+  background: url('https://i.imgur.com/W9Jyebu.jpg') no-repeat center center/cover;
+  height: 320px;
+}
+
+#showcase .showcase-content{
+  color:#fff;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#showcase .showcase-content h1{
+  font-size: 65px;
+  line-height: 1.2em;
+}
+
+#showcase .showcase-content p {
+  padding-bottom: 20px;
+  line-height: 1.7em;
+}
+
+#produce {
+  color: #344b3c;
+  font-weight: 500;
+  background-color: #f0ecfc;
+  border: none;
+  width: auto;
+  height: 50px;
+}
+
+#produce:hover {
+  background: #000000;
+  color: #ffff;
+}
+
 
 .produce {
  text-align: center; 
@@ -44,3 +149,4 @@ p {
   text-align: center;
   text-transform: capitalize;
 }
+
