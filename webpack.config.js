@@ -22,6 +22,11 @@ module.exports = {
       template: './src/index.html',
       inject: 'body'
     }),
+    new HtmlWebpackPlugin({
+      filename: 'recipes.html',
+      template: './src/recipes.html',
+      inject: 'body'
+    }),
     new Dotenv()
   ],
   module: {
