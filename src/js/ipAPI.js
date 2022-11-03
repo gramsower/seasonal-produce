@@ -1,7 +1,7 @@
 export default class IPLocate {
   static async getLocation() {
     try {
-      const response = await fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=${process.env.IP_API_KEY}`);
+      const response = await fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=${process.env.API_KEY}`);
       const jsonifiedResponse = await response.json();
       if (!response.ok) {
         const errorMessage = `${response.status} ${response.statusText} ${jsonifiedResponse.message}`;
