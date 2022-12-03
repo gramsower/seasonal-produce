@@ -1,6 +1,6 @@
 # Seasonal Produce
 
-#### (Brief Description of Application)
+####
 This application will show users what produce is currently in season within their area. The user will also have the ability to change their location and season to know what other produce are available at different times and if different areas.
 
 #### Contributors
